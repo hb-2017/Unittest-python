@@ -16,7 +16,7 @@ logger = Logger(logger = 'Basepage').getlog()
 
 class Basepage():
     """
-    定义一个页面基类，让所有页面都继承这个类，封装一些常用的页面操作方法到这个类
+    定义一个页面基类，让所有页面都继承这个类，封装一些常用的页面操作方法到这个类.
     """
 
     def __init__(self,driver):
