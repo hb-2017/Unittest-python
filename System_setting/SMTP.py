@@ -21,14 +21,14 @@ message['To'] =  Header("To测试", 'utf-8')
 subject = 'Python SMTP 邮件测试'
 message['Subject'] = Header(subject, 'utf-8')
 
-# try:
-smtpObj = smtplib.SMTP()
-smtpObj.connect(mail_host, 25)    # 25 为 SMTP 端口号
-smtpObj.login(mail_user,mail_pass)
-smtpObj.sendmail(sender, receivers,
-message.as_string())
-print ("邮件发送成功")
-# except smtplib.SMTPException:
-print ("Error: 无法发送邮件")
+try:
+    smtpObj = smtplib.SMTP()
+    smtpObj.connect(mail_host, 25)    # 25 为 SMTP 端口号
+    smtpObj.login(mail_user,mail_pass)
+    smtpObj.sendmail(sender, receivers,
+    message.as_string())
+    print ("邮件发送成功")
+except smtplib.SMTPException:
+    print ("Error: 无法发送邮件")
 
 
