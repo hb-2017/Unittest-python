@@ -1,0 +1,266 @@
+2018-02-01 15:32:46,274 - INFO - Driver[line:38] - 即将启动的浏览器驱动为：Chrome browser.
+2018-02-01 15:32:46,274 - INFO - Driver[line:42] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 15:32:50,541 - INFO - Driver[line:49] - 开始打开Chrome浏览器...
+2018-02-01 15:32:51,822 - INFO - Driver[line:55] - 进入域名: https://www.1dadan.com
+2018-02-01 15:32:53,291 - INFO - Driver[line:57] - 浏览器窗口最大化.
+2018-02-01 15:32:53,293 - INFO - Driver[line:59] - 浏览器最大等待时间为10秒
+2018-02-01 15:32:53,303 - ERROR - Config[line:61] - 获取配置信息失败:No section: 'c'
+2018-02-01 15:32:57,414 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 15:34:18,888 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 15:34:18,888 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 15:34:23,105 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 15:34:24,195 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 15:34:25,658 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 15:34:25,661 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 15:34:25,673 - ERROR - Config[line:61] - 获取配置信息失败:No section: 'c'
+2018-02-01 15:34:29,772 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 15:35:25,927 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 15:35:25,927 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 15:35:30,291 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 15:35:31,644 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 15:35:33,111 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 15:35:33,122 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 15:36:37,953 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 15:36:37,956 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 15:36:42,558 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 15:36:43,645 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 15:36:45,077 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 15:36:45,079 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 15:43:05,518 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 15:43:05,519 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 15:43:16,068 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 15:43:17,397 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 15:43:18,857 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 15:43:18,859 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 15:43:52,279 - INFO - Config[line:43] - 获取单组配置信息：[] 成功
+2018-02-01 15:43:56,648 - INFO - Config[line:43] - 获取单组配置信息：[] 成功
+2018-02-01 15:44:05,629 - INFO - Basepage[line:159] - Had find the element '  ' successful by id via value: userName 
+2018-02-01 15:44:05,850 - INFO - Basepage[line:245] - Had type ' 1qaz2wsx ' in inputBox
+2018-02-01 15:44:17,525 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 15:44:17,526 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 15:44:21,648 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 15:44:23,103 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 15:44:24,549 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 15:44:24,553 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 15:44:24,563 - INFO - Config[line:43] - 获取单组配置信息：[] 成功
+2018-02-01 15:44:24,565 - INFO - Config[line:43] - 获取单组配置信息：[] 成功
+2018-02-01 15:44:24,690 - INFO - Basepage[line:159] - Had find the element '  ' successful by id via value: userName 
+2018-02-01 15:44:24,888 - INFO - Basepage[line:245] - Had type ' 1qaz2wsx ' in inputBox
+2018-02-01 15:44:28,981 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 15:45:15,619 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 15:45:15,621 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 15:45:20,023 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 15:45:21,407 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 15:45:22,873 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 15:45:22,875 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 15:45:22,888 - INFO - Config[line:43] - 获取单组配置信息：[] 成功
+2018-02-01 15:45:22,888 - INFO - Config[line:43] - 获取单组配置信息：[] 成功
+2018-02-01 15:45:22,975 - INFO - Basepage[line:159] - Had find the element '  ' successful by id via value: userName 
+2018-02-01 15:45:23,141 - INFO - Basepage[line:245] - Had type ' cadaly ' in inputBox
+2018-02-01 15:45:33,167 - ERROR - Basepage[line:161] - NoSuchElementException: Message: no such element: Unable to locate element: {"method":"id","selector":"password"}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+2018-02-01 15:45:33,819 - INFO - Basepage[line:133] - Had take screenshot and save to folder : /screenshots
+2018-02-01 15:45:37,965 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 15:46:09,307 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 15:46:09,307 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 15:46:13,655 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 15:46:15,095 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 15:46:16,570 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 15:46:16,574 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 15:46:16,588 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 15:46:16,711 - INFO - Basepage[line:159] - Had find the element '  ' successful by id via value: userName 
+2018-02-01 15:46:16,878 - INFO - Basepage[line:245] - Had type ' cadaly ' in inputBox
+2018-02-01 15:46:26,938 - ERROR - Basepage[line:161] - NoSuchElementException: Message: no such element: Unable to locate element: {"method":"id","selector":"password"}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+2018-02-01 15:46:27,635 - INFO - Basepage[line:133] - Had take screenshot and save to folder : /screenshots
+2018-02-01 15:46:31,945 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 16:06:06,976 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:06:06,978 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:06:21,949 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:06:23,710 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:06:25,199 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:06:25,203 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:06:25,226 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 16:06:25,470 - INFO - Basepage[line:160] - 通过键 id 值 value: userName 找到了元素 '  ' successful 
+2018-02-01 16:06:25,742 - INFO - Basepage[line:245] - 成功在框输入文字信息cadaly
+2018-02-01 16:06:25,822 - INFO - Basepage[line:160] - 通过键 id 值 value: passWord 找到了元素 '  ' successful 
+2018-02-01 16:06:26,062 - INFO - Basepage[line:245] - 成功在框输入文字信息1qaz2wsx
+2018-02-01 16:06:26,143 - INFO - Basepage[line:160] - 通过键 id 值 value: submit 找到了元素 '  ' successful 
+2018-02-01 16:06:33,426 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 16:10:10,535 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:10:10,536 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:10:15,610 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:10:24,463 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:10:25,926 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:10:25,931 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:10:25,953 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 16:10:26,092 - INFO - Basepage[line:160] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 16:10:26,338 - INFO - Basepage[line:245] - 成功在框输入文字信息：cadaly
+2018-02-01 16:10:26,427 - INFO - Basepage[line:160] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 16:10:26,629 - INFO - Basepage[line:245] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 16:10:26,702 - INFO - Basepage[line:160] - 通过键 id 值 : submit 找到元素 '  ' 成功 
+2018-02-01 16:10:32,963 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 16:18:13,313 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:18:13,317 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:18:18,519 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:18:22,482 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:18:23,969 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:18:23,973 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:18:38,772 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:18:38,774 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:18:44,012 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:18:45,528 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:18:47,019 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:18:47,025 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:18:47,055 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 16:18:47,182 - INFO - Basepage[line:160] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 16:18:47,409 - INFO - Basepage[line:245] - 成功在框输入文字信息：cadaly
+2018-02-01 16:18:47,486 - INFO - Basepage[line:160] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 16:18:47,694 - INFO - Basepage[line:245] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 16:18:47,775 - INFO - Basepage[line:160] - 通过键 id 值 : submit 找到元素 '  ' 成功 
+2018-02-01 16:19:37,049 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:19:37,050 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:19:42,081 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:19:43,693 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:19:45,148 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:19:45,154 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:19:45,190 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 16:19:45,269 - INFO - Basepage[line:160] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 16:19:45,492 - INFO - Basepage[line:245] - 成功在框输入文字信息：cadaly
+2018-02-01 16:19:45,572 - INFO - Basepage[line:160] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 16:19:45,783 - INFO - Basepage[line:245] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 16:19:52,073 - INFO - Basepage[line:160] - 通过键 id 值 : submit 找到元素 '  ' 成功 
+2018-02-01 16:20:58,187 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:20:58,187 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:21:03,477 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:21:04,758 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:21:06,275 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:21:06,283 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:21:06,298 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 16:21:06,411 - INFO - Basepage[line:160] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 16:21:06,643 - INFO - Basepage[line:245] - 成功在框输入文字信息：cadaly
+2018-02-01 16:21:06,721 - INFO - Basepage[line:160] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 16:21:06,924 - INFO - Basepage[line:245] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 16:21:06,997 - INFO - Basepage[line:160] - 通过键 id 值 : submit 找到元素 '  ' 成功 
+2018-02-01 16:21:16,686 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 16:28:06,083 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:28:06,084 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:28:11,417 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:28:19,501 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:28:20,974 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:28:20,976 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:28:21,251 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 16:28:25,335 - INFO - Basepage[line:160] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 16:28:25,875 - INFO - Basepage[line:246] - 成功在框输入文字信息：cadaly
+2018-02-01 16:28:25,958 - INFO - Basepage[line:160] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 16:28:26,164 - INFO - Basepage[line:246] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 16:28:26,267 - INFO - Basepage[line:160] - 通过键 id 值 : submit 找到元素 '  ' 成功 
+2018-02-01 16:28:27,093 - INFO - Basepage[line:268] - 元素：被点击.
+2018-02-01 16:28:27,095 - INFO - Basepage[line:48] - 页面开始等待...最大%s秒" % seconds
+2018-02-01 16:28:31,238 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 16:31:22,730 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:31:22,733 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:31:27,384 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:31:28,842 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:31:30,407 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:31:30,415 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:31:30,463 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 16:31:30,608 - INFO - Basepage[line:161] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 16:31:30,859 - INFO - Basepage[line:247] - 成功在框输入文字信息：cadaly
+2018-02-01 16:31:30,944 - INFO - Basepage[line:161] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 16:31:31,173 - INFO - Basepage[line:247] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 16:31:31,273 - INFO - Basepage[line:161] - 通过键 id 值 : submit 找到元素 '  ' 成功 
+2018-02-01 16:54:22,906 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:54:22,907 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:54:30,373 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:54:35,657 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:54:37,318 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:54:37,319 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:54:37,486 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 16:54:40,191 - INFO - Basepage[line:161] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 16:54:40,742 - INFO - Basepage[line:245] - 成功在框输入文字信息：cadaly
+2018-02-01 16:54:40,833 - INFO - Basepage[line:161] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 16:54:41,014 - INFO - Basepage[line:245] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 16:54:51,026 - ERROR - Basepage[line:163] - 寻找元素失败，元素未找到: Message: no such element: Unable to locate element: {"method":"id","selector":"submit1"}
+  (Session info: chrome=60.0.3112.90)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+2018-02-01 16:54:55,526 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 16:56:54,531 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 16:56:54,532 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 16:57:00,413 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 16:57:01,822 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 16:57:03,323 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 16:57:03,330 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 16:57:03,351 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 16:57:03,516 - INFO - Basepage[line:161] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 16:57:03,723 - INFO - Basepage[line:245] - 成功在框输入文字信息：cadaly
+2018-02-01 16:57:03,808 - INFO - Basepage[line:161] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 16:57:04,015 - INFO - Basepage[line:245] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 16:57:04,092 - INFO - Basepage[line:161] - 通过键 id 值 : submit 找到元素 '  ' 成功 
+2018-02-01 16:57:13,424 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 17:38:01,066 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 17:38:01,067 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 17:38:16,143 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 17:38:17,639 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 17:38:19,236 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 17:38:19,249 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 17:38:19,273 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 17:38:19,438 - INFO - Basepage[line:161] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 17:38:19,749 - INFO - Basepage[line:245] - 成功在框输入文字信息：cadaly
+2018-02-01 17:38:19,855 - INFO - Basepage[line:161] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 17:38:20,153 - INFO - Basepage[line:245] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 17:38:20,257 - INFO - Basepage[line:161] - 通过键 id 值 : submit 找到元素 '  ' 成功 
+2018-02-01 17:38:23,614 - INFO - Basepage[line:267] - 元素： 被点击
+2018-02-01 17:38:23,659 - INFO - Basepage[line:48] - 页面开始等待...最大5秒
+2018-02-01 17:38:28,317 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 17:42:44,650 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 17:42:44,651 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 17:42:56,693 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 17:42:58,221 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 17:42:59,786 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 17:42:59,890 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 17:43:00,647 - INFO - Config[line:43] - 获取单组配置信息：['cadaly', '1qaz2wsx'] 成功
+2018-02-01 17:43:00,878 - INFO - Basepage[line:161] - 通过键 id 值 : userName 找到元素 '  ' 成功 
+2018-02-01 17:43:01,184 - INFO - Basepage[line:245] - 成功在框输入文字信息：cadaly
+2018-02-01 17:43:01,271 - INFO - Basepage[line:161] - 通过键 id 值 : passWord 找到元素 '  ' 成功 
+2018-02-01 17:43:01,463 - INFO - Basepage[line:245] - 成功在框输入文字信息：1qaz2wsx
+2018-02-01 17:43:01,553 - INFO - Basepage[line:161] - 通过键 id 值 : submit 找到元素 '  ' 成功 
+2018-02-01 17:43:05,821 - INFO - Basepage[line:267] - 元素： 被点击
+2018-02-01 17:43:05,823 - INFO - Basepage[line:48] - 页面开始等待...最大5秒
+2018-02-01 17:43:10,105 - INFO - quit_browser[line:33] - 浏览器退出 !
+2018-02-01 18:14:43,855 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 18:14:43,857 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 18:15:08,925 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 18:15:10,405 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 18:15:11,950 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 18:15:11,954 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 18:17:14,223 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 18:17:14,225 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 18:17:19,439 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 18:17:20,847 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 18:17:22,341 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 18:17:22,355 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 18:17:22,365 - INFO - test_cc[line:15] - test01执行
+2018-02-01 18:17:22,366 - INFO - test_cc[line:18] - test02执行
+2018-02-01 18:17:22,368 - INFO - test_cc[line:22] - test03执行
+2018-02-01 18:17:22,369 - INFO - test_cc[line:25] - test04执行
+2018-02-01 18:22:21,153 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-01 18:22:21,154 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-01 18:22:31,522 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-01 18:22:33,015 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-01 18:22:34,549 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-01 18:22:34,555 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-01 18:22:34,578 - INFO - test_cc[line:16] - test01执行
+2018-02-01 18:22:34,578 - INFO - test_cc[line:20] - 当前test02 -- 0
+2018-02-01 18:22:34,578 - INFO - test_cc[line:20] - 当前test02 -- 1
+2018-02-01 18:22:34,578 - INFO - test_cc[line:20] - 当前test02 -- 2
+2018-02-01 18:22:34,578 - INFO - test_cc[line:20] - 当前test02 -- 3
+2018-02-01 18:22:34,578 - INFO - test_cc[line:20] - 当前test02 -- 4
+2018-02-01 18:22:34,581 - INFO - test_cc[line:20] - 当前test02 -- 5
+2018-02-01 18:22:34,582 - INFO - test_cc[line:26] - test03执行
+2018-02-01 18:22:34,584 - INFO - test_cc[line:29] - test04执行

@@ -1,0 +1,17 @@
+2018-02-02 15:52:02,753 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-02 15:52:02,754 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-02 15:54:24,467 - INFO - Driver[line:37] - 即将启动的浏览器驱动为：Chrome 浏览器.
+2018-02-02 15:54:24,468 - INFO - Driver[line:41] - 即将进入的域名是: https://www.1dadan.com
+2018-02-02 15:54:29,291 - INFO - Driver[line:48] - 开始打开Chrome浏览器...
+2018-02-02 15:54:30,125 - INFO - Driver[line:54] - 进入域名: https://www.1dadan.com
+2018-02-02 15:54:31,304 - INFO - Driver[line:56] - 浏览器窗口最大化.
+2018-02-02 15:54:31,307 - INFO - Driver[line:58] - 浏览器最大等待时间为10秒
+2018-02-02 15:54:31,321 - INFO - test_cc[line:16] - test01执行
+2018-02-02 15:54:31,322 - INFO - test_cc[line:20] - 当前test02 -- 0
+2018-02-02 15:54:31,322 - INFO - test_cc[line:20] - 当前test02 -- 1
+2018-02-02 15:54:31,322 - INFO - test_cc[line:20] - 当前test02 -- 2
+2018-02-02 15:54:31,322 - INFO - test_cc[line:20] - 当前test02 -- 3
+2018-02-02 15:54:31,323 - INFO - test_cc[line:20] - 当前test02 -- 4
+2018-02-02 15:54:31,323 - INFO - test_cc[line:20] - 当前test02 -- 5
+2018-02-02 15:54:31,324 - INFO - test_cc[line:26] - test03执行
+2018-02-02 15:54:31,324 - INFO - test_cc[line:29] - test04执行
