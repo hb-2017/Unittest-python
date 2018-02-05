@@ -19,7 +19,7 @@ if __name__=='__main__':
     report_title = 'Test_login'
     fp = re.Test_report(report_title)
     # 初始化一个HTMLTestRunner实例对象，用来生成报告
-    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"登录测试", description=u"用例测试情况",tester='huxiansheng')
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"登录测试", description=u"用例测试情况",verbosity=2,tester='huxiansheng')
     # 开始执行测试套件
     runner.run(suite)
     fp.close()

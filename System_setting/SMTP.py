@@ -8,27 +8,27 @@ from email.header import Header
 
 # 第三方 SMTP 服务
 mail_host="smtp.163.com"  #设置服务器
-mail_user="m18664594496@163.com"   #用户名
-mail_pass="wwwhubiao165++"   #口令
+port = 0                   # 端口
+sender="m18664594496@163.com"   #用户名
+psw="wwwhubiao165++"   #密码
+receiver = 'www.165hubiao.cn@qq.com'  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
-sender = 'm18664594496@163.com'
-receivers = '[819920696@qq.com]'  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+# ----------2.编辑邮件的内容------
+subject = "这个是主题163"
+body = '<p>这个是发送的163邮件</p>'  # 定义邮件正文为html格式
+msg = MIMEText(body, "html", "utf-8")
+msg['from'] = sender
+msg['to'] = "www.165hubiao.cn@qq.com"
+msg['subject'] = subject
 
-message = MIMEText('Python SMTP 邮件发送测试', 'plain', 'utf-8')
-message['From'] = Header("From测试",'utf-8')
-message['To'] =  Header("To测试", 'utf-8')
 
-subject = 'Python SMTP 邮件测试'
-message['Subject'] = Header(subject, 'utf-8')
+# ----------3.发送邮件------
+smtp = smtplib.SMTP()
+smtp.connect(mail_host)                                  # 连服务器
+a= smtp.login(sender, psw)                                     # 登录
+print(a)
+smtp.sendmail(sender, receiver, msg.as_string())  # 发送
 
-try:
-    smtpObj = smtplib.SMTP()
-    smtpObj.connect(mail_host, 25)    # 25 为 SMTP 端口号
-    smtpObj.login(mail_user,mail_pass)
-    smtpObj.sendmail(sender, receivers,
-    message.as_string())
-    print ("邮件发送成功")
-except smtplib.SMTPException:
-    print ("Error: 无法发送邮件")
+smtp.quit()
 
 
