@@ -72,7 +72,7 @@ class Smtp():
             emil_bady = self.get_Enclosure(self.report_path)
             att = MIMEText(emil_bady, "base64", "utf-8")
             att["Content-Type"] = "application/octet-stream"
-            att["Content-Disposition"] = 'attachment; filename=%s'%self.report
+            att["Content-Disposition"] = 'attachment; filename=%s'%self.report  #filename是附件的名字
             msg.attach(att)
             self.get_html(msg, emil_bady)
             # 邮件头
@@ -101,7 +101,7 @@ class Smtp():
             emil_bady = self.get_Enclosure(self.report_path)
             att = MIMEText(emil_bady, "base64", "utf-8")
             att["Content-Type"] = "application/octet-stream"
-            att["Content-Disposition"] = 'attachment; filename=%s'%self.report
+            att["Content-Disposition"] = 'attachment; filename=%s'%self.report  #filename是附件的名字
             msg.attach(att)
             self.get_html(msg, emil_bady)
             # 邮件头
