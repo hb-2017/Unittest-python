@@ -7,7 +7,7 @@ import HTMLTestRunner
 from Test_case.Tese1 import Test_login
 from System_setting.Report import Report
 from Browser_statr.Driver_statr import Load_drive
-
+from System_setting.SMTP import Smtp
 
 suite = unittest.TestSuite()
 suite.addTest(Test_login("test_login"))  #登录测试用例
@@ -17,11 +17,14 @@ if __name__=='__main__':
     # 实例化测试报告
     re = Report()
     report_title = 'Test_login'
-    fp = re.Test_report(report_title)
+    fp,report_path = re.Test_report(report_title)
     # 初始化一个HTMLTestRunner实例对象，用来生成报告
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"登录测试", description=u"用例测试情况",verbosity=2,tester='huxiansheng')
     # 开始执行测试套件
     runner.run(suite)
     fp.close()
+    # 发送邮件
+    smtp = Smtp(report_path)
+    smtp.smtp163()
 
 

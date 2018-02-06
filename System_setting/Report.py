@@ -35,7 +35,7 @@ class Report():
         report_path = report_path + '/' +report_name + '-' +report_title+'.html'
         fp = open(report_path, "wb")
         # logger.info('：%s已生成！'%report_title)
-        return fp
+        return fp,report_path
 
 
 

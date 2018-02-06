@@ -41,6 +41,7 @@ class Config():
                         item = self.config.get(''.join(config_title), item)
                         value.append(item)
                     values.append(value)
+                    values = values[0]
                     logger.info('获取单组配置信息：%s 成功' % values)
                 # 多组配置读取
                 elif len(config_title) > 1:

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Author  : huxiansheng (you@example.org)
 
-config_title = ['str']
-a = ''.join(config_title)
+receiver = "xxxx@qq.com"
+b = receiver.split(',')
+a = ";".join(b)
 print(a)
