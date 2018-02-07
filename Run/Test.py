@@ -4,14 +4,16 @@
 
 import unittest
 import HTMLTestRunner
-from Test_case.Tese1 import Test_login
+# import Test_case
+from Test_case import Tese1
 from System_setting.Report import Report
 from Browser_statr.Driver_statr import Load_drive
 from System_setting.SMTP import Smtp
 
-suite = unittest.TestSuite()
-suite.addTest(Test_login("test_login"))  #登录测试用例
-suite.addTest(Load_drive("test_quit_browser"))  #退出浏览器
+cases=unittest.TestLoader().loadTestsFromTestCase(Tese1.Test_login)
+suite = unittest.TestSuite([cases])
+# suite.addTest(Tese1.Test_login("test_login"))  #登录测试用例
+# suite.addTest(Load_drive("test_quit_browser"))  #退出浏览器
 
 if __name__=='__main__':
     # 实例化测试报告

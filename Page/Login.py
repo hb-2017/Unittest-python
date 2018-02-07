@@ -10,6 +10,8 @@ class login_page(Basepage):
     password = 'id=>passWord'
     submit = 'id=>submit'
 
+    error_tip = 'class=>error'  #错误提示
+    captchaImg = 'id=>captchaImg'
 
     def input_userinfo(self,userinfo):
         self.input(self.username,userinfo[0])
@@ -24,7 +26,13 @@ class login_page(Basepage):
             self.click(self.submit)
             self.browser_wait(5)
 
+    def login_error_tip(self):
+        text = self.get_elemeent_text(self.error_tip)
+        return text
 
 
+    def captchaImg_is_exist(self):
+        is_exist = self.element_is_dispalynd(self.captchaImg)
+        return is_exist
 
 

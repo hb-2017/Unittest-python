@@ -11,7 +11,7 @@ import xlrd
 from All_class.Decorator import Decorator
 
 logger = Logger(logger='exceldata').getlog()
-class exceldata():
+class Exceldata():
 
     def __init__(self):
         xpath = Root_xpath()
@@ -65,6 +65,5 @@ class exceldata():
                     value.append(it)
             _values.append(value)
         return _values
-
 
 
