@@ -8,6 +8,7 @@ import math
 from System_setting.Logger import Logger
 from System_setting.Root_directory import Root_xpath
 import xlrd
+from All_class.Decorator import Decorator
 
 logger = Logger(logger='exceldata').getlog()
 class exceldata():
@@ -16,7 +17,7 @@ class exceldata():
         xpath = Root_xpath()
         self.excel_path = xpath.get_root_path()+'/Data/Excel/'
 
-
+    @Decorator.Running_time()
     def get_data(self,excel_name,excel_sheet=None):
         excel_path = self.excel_path+excel_name+'.xls'
         try:
@@ -35,12 +36,14 @@ class exceldata():
         # 获取行数和列数
         nrows = table.nrows
         ncols = table.ncols
+        logger.info('当前页签数据行数：%s,列数为：%s'%(nrows,ncols))
         # 循环行列表数据
         values = []
         for i in range(nrows-1): # 去掉第一行的标题
             va = table.row_values(i+1)
             values.append(va)
         values = self.change_datatype(values)
+        logger.info('获取到excel表数据：%s'%values)
         # print(values)
         return values
 
