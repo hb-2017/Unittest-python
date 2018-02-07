@@ -15,7 +15,7 @@ class Decorator():
     def Running_time(text=None):
         def _Running_time(func):
             def wrapper(*args,**kwargs):  #匹配任何参数
-                logger.info('执行方法【%s】开始...')
+                logger.info('执行方法【%s】开始...'%func.__name__)
                 statr_time = time.time()
                 data = func(*args, **kwargs)
                 end_time = time.time()

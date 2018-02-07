@@ -44,12 +44,16 @@ class Driver():
             driver = webdriver.Firefox()
             logger.info("开始打开Firefox浏览器...")
         elif browser == "Chrome":
+            option = webdriver.ChromeOptions()
+            # option.add_argument('disable-infobars')
+            # option.add_argument('headless')
             driver = webdriver.Chrome(self.Chrome_driver_path)
             logger.info("开始打开Chrome浏览器...")
         elif browser == "IE":
             driver = webdriver.Ie(self.Ie_driver_path)
             logger.info("开始打开IE浏览器...")
         # 打开网址并且写入日志
+
         driver.get(url)
         logger.info("进入域名: %s" % url)
         driver.maximize_window()
