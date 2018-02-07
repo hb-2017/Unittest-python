@@ -7,18 +7,20 @@ import configparser
 from System_setting.Logger import Logger
 from System_setting.Config import Config
 from Browser_statr.Driver_statr import Load_drive
+from All_class.Decorator import Decorator
 
 logger = Logger(logger='test1').getlog()
 
 class Test_login(Load_drive):
 
+    @Decorator.Running_time()
     def get_userinfo(self):
         config_value = ['username','password']
         config = Config()
         data = config.config_data(config_name='common_data.ini',config_title=['code_01'],config_value=config_value)
         return data
 
-
+    @Decorator.Running_time()
     def test_login(self):
         data = self.get_userinfo()
         login_pg = login_page(self.browser)

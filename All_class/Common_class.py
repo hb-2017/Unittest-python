@@ -25,3 +25,11 @@ class common_class():
             except BaseException as e:
                 logger.error('object类型转换出错：%s'%e)
                 return obj
+
+
+
+
+
+
+
+
