@@ -38,17 +38,22 @@ class Exceldata():
         ncols = table.ncols
         logger.info('当前页签数据行数：%s,列数为：%s'%(nrows,ncols))
         # 循环行列表数据
-        values = []
+        values=[]
         for i in range(nrows-1): # 去掉第一行的标题
-            va = table.row_values(i+1)
-            values.append(va)
-        values = self.change_datatype(values)
+            value = {}
+            key = table.row_values(0) #第一行标题
+            va = table.row_values(i+1) #当前行的值
+            for item,v in enumerate(va):
+                va_time = va[item]
+                if type(va_time)==float:  # 对小数点数值进行处理，转换为整数
+                    va_time = int(math.floor(va_time))
+                value[key[item]]=va_time
+            values.append(value)
         logger.info('获取到excel表数据：%s'%values)
-        # print(values)
         return values
 
 
-    # 对excel的数据进行处理，小数全部转换为整数
+    # 对list包含list的excel的数据进行处理，小数全部转换为整数
     def change_datatype(self,values):
         _values = []
         for item in values:
@@ -66,4 +71,5 @@ class Exceldata():
             _values.append(value)
         return _values
 
-
+# e = Exceldata()
+# e.get_data('login')

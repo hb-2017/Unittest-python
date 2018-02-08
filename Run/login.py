@@ -4,15 +4,17 @@
 
 import unittest
 import HTMLTestRunner
-# import Test_case
+import re
 from Test_case.Logincase import Test_login
 from System_setting.Report import Report
 from Browser_statr.Driver_statr import Load_drive
 from System_setting.SMTP import Smtp
 
 
+
 suite = unittest.TestSuite()
-suite.addTest(Test_login("test_login"))  #登录测试用例
+suite.addTest(unittest.TestLoader().loadTestsFromTestCase(Test_login))  #登录测试用例
+# suite.addTest(Test_login('test_login'))  #登录测试用例
 suite.addTest(Load_drive("test_quit_browser"))  #退出浏览器
 
 if __name__=='__main__':
@@ -21,7 +23,7 @@ if __name__=='__main__':
     report_title = 'Test_login'
     fp,report_path = re.Test_report(report_title)
     # 初始化一个HTMLTestRunner实例对象，用来生成报告
-    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"登录测试", description=u"用例测试情况",verbosity=1,tester='huxiansheng')
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"登录测试", description=u"用例测试情况",verbosity=2,tester='huxiansheng')
     # 开始执行测试套件
     runner.run(suite)
     fp.close()

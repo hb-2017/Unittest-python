@@ -12,6 +12,7 @@ logger = Logger(logger='Decorator').getlog()
 
 class Decorator():
 
+    #运行时间
     def Running_time(text=None):
         def _Running_time(func):
             def wrapper(*args,**kwargs):  #匹配任何参数
