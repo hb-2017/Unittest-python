@@ -28,6 +28,8 @@ class Load_drive(unittest.TestCase):
         # self.browser.quit()
         pass
 
+class Out_drive(Load_drive):
+
     def test_quit_browser(self):
         time.sleep(1)
         self.browser.quit()

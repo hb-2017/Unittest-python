@@ -3,11 +3,11 @@
 # @Author  : huxiansheng (you@example.org)
 
 import unittest
-import HTMLTestRunner_PY3_jpg
+import HTMLTestRunner
 import re
 from Test_case.Logincase import Test_login
 from System_setting.Report import Report
-from Browser_statr.Driver_statr import Load_drive
+from Browser_statr.Driver_statr import Load_drive,Out_drive
 from System_setting.SMTP import Smtp
 
 
@@ -15,7 +15,7 @@ from System_setting.SMTP import Smtp
 suite = unittest.TestSuite()
 suite.addTest(unittest.TestLoader().loadTestsFromTestCase(Test_login))  #登录测试用例
 # suite.addTest(Test_login('test_login'))  #登录测试用例
-suite.addTest(Load_drive("test_quit_browser"))  #退出浏览器
+suite.addTest(Out_drive("test_quit_browser"))  #退出浏览器
 
 
 if __name__=='__main__':

@@ -21,6 +21,10 @@ _Screen = Screen()
 @ddt.ddt
 class Test_login(Load_drive):
 
+    # @classmethod
+    # def setUpClass(cls):
+    #    cls.browser = Load_drive().browser
+
 
     @Decorator.Running_time()
     def get_userinfo(self):
