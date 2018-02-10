@@ -17,27 +17,37 @@ logger = Logger(logger = 'Screenhorts').getlog()
 
 class Screen(Load_drive):
 
-	def get_report_path(self):
-		root = Root_xpath()
-		root_path = root.get_root_path()
-		Screen_path = root_path + '/test_screen'
-		return Screen_path
+    def get_report_path(self):
+        root = Root_xpath()
+        root_path = root.get_root_path()
+        Screen_path = root_path + '/Data/Screenshots'
+        return Screen_path
 
 
-	def get_windows_img(self,screen_title):
-		Screen_path = self.get_report_path()
-		# 获取系统当前时间
-		month = time.strftime("%m", time.localtime(time.time()))
-		day = time.strftime("%d", time.localtime(time.time()))
-		Screen_name = time.strftime("%H_%M_%S", time.localtime(time.time()))
-		Screen_path = Screen_path + r'/' + month + '月' + r'/' + day + '日'
-		Screen_statu = os.path.exists(Screen_path)
-		if Screen_statu == False:
-			os.makedirs(Screen_statu)
-		screenname = Screen_path + '/' + Screen_name + '-' + screen_title + '.png'
-		try:
-			self.browser.get_screenshot_as_file(screenname)
-			logger.info('产生截图,截图时间:%s,名称为%s ' % (time.time(), screen_title))
-		except NameError as e:
-			logger.error('系统截图发生未知异常, %s' % e)
-			self.get_windows_img(screen_title)
+    def get_windows_img(self,screen_title):
+        Screen_path = self.get_report_path()
+        # 获取系统当前时间
+        month = time.strftime("%m", time.localtime(time.time()))
+        day = time.strftime("%d", time.localtime(time.time()))
+        Screen_name = time.strftime("%H_%M_%S", time.localtime(time.time()))
+        Screen_path = Screen_path + r'/' + month + '月' + r'/' + day + '日'
+        Screen_statu = os.path.exists(Screen_path)
+        if Screen_statu == False:
+            os.makedirs(Screen_path)
+        screenname = Screen_path + '/' + Screen_name + '-' + screen_title + '.png'
+        try:
+            self.browser.get_screenshot_as_file(screenname)
+            logger.info('产生截图,截图时间:%s,名称为%s ' % (time.time(), screen_title))
+        except NameError as e:
+            logger.error('系统截图发生未知异常, %s' % e)
+            self.get_windows_img(screen_title)
+        return Screen_path
+
+
+    def repost_error_img(self):
+        try:
+            a = self.browser.get_screenshot_as_base64()
+            logger.info('repost_error_img++++++++++++++++++')
+            return a
+        except NameError as e:
+            logger.error('系统截图发生未知异常, %s' % e)

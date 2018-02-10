@@ -11,10 +11,12 @@ from System_setting.Exceldata import Exceldata
 from Browser_statr.Driver_statr import Load_drive
 from All_class.Decorator import Decorator
 from All_class.Exception import Custom_exception
+from System_setting.Screenshot import Screen
 
 values = Exceldata().get_data('login')
 excep = Custom_exception()
 logger = Logger(logger='test1').getlog()
+_Screen = Screen()
 
 @ddt.ddt
 class Test_login(Load_drive):
@@ -66,17 +68,19 @@ class Test_login(Load_drive):
     @ddt.data(*values)
     @ddt.unpack
     def test_login(self,username,password,suc,msg):
+
+        logger.info('登录数据为【%s,%s,%s,%s】'%(username,password,suc,msg))
         login_pa = login_page(self.browser)
-        login_pa.click_submit(values)
+        login_pa.click_submit(username,password)
         #正确用例
         if suc==0:
             is_login = login_pa.get_page_title()
         #错误用例
         else:
             is_login = login_pa.login_error_tip()
-        if self.assertEqual(is_login, msg):
+        if is_login==msg:
             logger.info('登录测试之:%s测试通过' % username)
-        elif self.assertEqual(is_login, '请输入图片验证码'):
+        elif is_login=='请输入图片验证码':
             logger.info('登录测试之:%s测试通过' % username)
         else:
             logger.error('登录测试之:%s测试失败' % username)

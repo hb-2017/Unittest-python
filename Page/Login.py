@@ -13,16 +13,16 @@ class login_page(Basepage):
     error_tip = 'class=>error'  #错误提示
     captchaImg = 'id=>captchaImg'
 
-    def input_userinfo(self,userinfo):
-        self.input(self.username,userinfo[0])
-        self.input(self.password,userinfo[1])
+    def input_userinfo(self,username,password):
+        self.input(self.username,username)
+        self.input(self.password,password)
 
 
-    def click_submit(self,userinfo=None):
-        if userinfo==None:
+    def click_submit(self,username,password):
+        if username==None:
             self.click(self.submit)
         else:
-            self.input_userinfo(userinfo)
+            self.input_userinfo(username,password)
             self.click(self.submit)
             self.browser_wait(5)
 
