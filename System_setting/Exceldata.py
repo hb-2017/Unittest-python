@@ -71,5 +71,7 @@ class Exceldata():
             _values.append(value)
         return _values
 
-# e = Exceldata()
-# e.get_data('login')
+
+excel = Exceldata()
+data = excel.get_data('template')
+print(data)

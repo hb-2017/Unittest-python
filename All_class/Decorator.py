@@ -5,13 +5,11 @@
 import time
 import inspect
 from System_setting.Logger import Logger
-
 logger = Logger(logger='Decorator').getlog()
 
 
 
 class Decorator():
-
     #运行时间
     def Running_time(text=None):
         def _Running_time(func):

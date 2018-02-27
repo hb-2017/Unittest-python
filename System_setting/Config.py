@@ -20,7 +20,7 @@ class Config():
 
     '''
         参数
-        config_xpath 配置文件路劲 类型为str
+        config_name  配置文件名称 类型为str
         config_title 配置文件组名 类型为list
         config_value 配置文件键名 类型为list
 

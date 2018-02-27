@@ -72,7 +72,7 @@ class Test_login(Load_drive):
     @ddt.data(*values)
     @ddt.unpack
     def test_login(self,username,password,suc,msg):
-
+        '''登录'''
         logger.info('登录数据为【%s,%s,%s,%s】'%(username,password,suc,msg))
         login_pa = login_page(self.browser)
         login_pa.click_submit(username,password)
@@ -89,6 +89,21 @@ class Test_login(Load_drive):
         else:
             logger.error('登录测试之:%s测试失败' % username)
             raise excep.test_fail(username)
+
+
+    def test_login_success(self):
+        data = Config().config_data('common_data',['code_09'],['username','password'])
+        username = data[0]
+        password = data[1]
+        login_pa = login_page(self.browser)
+        login_pa.click_submit(username, password)
+        login_pa.sleep(2)
+        is_login = login_pa.get_page_title()
+        if is_login=='易打单 | 批量打印':
+            logger.info('%s 登录成功'%username)
+        else:
+            login_tip = login_pa.login_error_tip()
+            logger.error('%s 登录失败,%s' % (username,login_tip))
 
 
 

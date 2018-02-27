@@ -341,7 +341,7 @@ class Basepage():
 
 
     #键盘输入
-    def Send_keys(self,selector):
+    def Send_keys_ENTER(self,selector):
         el = self.find_element(selector)
         try:
             el.send_keys(Keys.ENTER)
