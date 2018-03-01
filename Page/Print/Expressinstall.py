@@ -20,7 +20,11 @@ class expressinstall(Basepage):
     Payment_mode_02 = 'class_name=>payTypeGroup_2' #到付现结
     Payment_mode_03 = 'class_name=>payTypeGroup_3' #寄付现结
     Payment_mode_04 = 'class_name=>payTypeGroup_4' #第三方付月结
+    PayCustId = 'id=>addTempPayCustId' #月结卡号
     Business_type = 'id=>expressTypeSelect'  # 业务类型下拉
+
+    ZL_code_div = 'id=>imgType_02'
+
 
     savetemplate = 'id=>saveWaybillTemplateBtn' #添加按钮
     canceltemplate = 'id=>cancelWaybillTemplateBtn' #取消按钮
@@ -69,6 +73,25 @@ class expressinstall(Basepage):
             self.click(self.Payment_mode_01)
         self.sleep(1)
 
+    # 点击月结卡号
+    def click_PayCustId(self,CustId):
+        select = self.find_element(self.PayCustId)
+        CustIds = select.find_elements_by_tag_name('option')
+        for CustId_ in CustIds:
+            CustId_text = CustId_.text
+            if CustId_text ==CustId:
+                try:
+                    CustId_.click()
+                    click_PayCustId_statu = True
+                except:
+                    click_PayCustId_statu = False
+                break
+        else:
+            click_PayCustId_statu = None
+        self.sleep(1)
+        return click_PayCustId_statu
+
+
     # 选择业务类型
     def click_Business_type(self,Business_type):
         select = self.find_element(self.Business_type)
@@ -76,13 +99,40 @@ class expressinstall(Basepage):
         for option in options:
             option_text = option.text
             if Business_type ==option_text:
-                option.click()
-                click_expressType_statu = True
+                try:
+                    option.click()
+                    click_expressType_statu = True
+                except :
+                    click_expressType_statu = False
                 break
         else:
             click_expressType_statu=None
         self.sleep(1)
         return click_expressType_statu
+
+    # 填写直连商家信息
+    def input_ZL_code(self,code_list):
+        div = self.find_elements(self.ZL_code_div)[1]
+        inputs = div.find_emelenet_by_tag_name('input')
+        for item,input in enumerate(inputs):
+            try:
+                input.sen_keys(code_list[item])
+            except:
+                input_ZL_code_statu = False
+        else:
+            input_ZL_code_statu = True
+        return input_ZL_code_statu
+
+
+
+
+
+
+
+
+
+
+
 
     # 添加模板
     def click_savetemplate(self):

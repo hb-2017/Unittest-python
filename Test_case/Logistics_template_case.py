@@ -19,7 +19,6 @@ class add_template(Load_drive):
         self.express = expressinstall(self.browser)
         self.home_pg = home_page(self.browser)
 
-
     def get_template_data(self):
         excel = Exceldata()
         data = excel.get_data('template')
@@ -30,12 +29,17 @@ class add_template(Load_drive):
         # 数据处理
         Template_name = data['Template']
         Freight_Payment = data['Freight_Payment']
+        CustId = data['CustId']
         Business_type = data['Business_type']
         # 选择面单类型
         Choice_template_statu = self.Choice_template(Template_name)
         if Choice_template_statu:
             # 选择付款方式
             self.express.click_Payment_mode(Freight_Payment)
+            if Freight_Payment=='寄付月结' or Freight_Payment =='第三方付月结' and len(CustId)!=0:
+                click_PayCustId_statu = self.express.click_PayCustId(CustId)
+                if click_PayCustId_statu==False or click_PayCustId_statu==None:
+                    logger.info('月结卡号%s不存在，或选择月结卡号出错'%CustId)
             # 选择业务类型
             click_expressType_statu = self.express.click_Business_type(Business_type)
             if click_expressType_statu==None:
@@ -43,11 +47,13 @@ class add_template(Load_drive):
             # 添加模板
             self.express.click_savetemplate()
             # 判断是否添加成功
-            save_statu = self.save_statu()
+            save_statu,save_tip = self.save_statu()
             if save_statu==True:
                 add_SF_template_statu=True
+                logger.info('添加SF模板%s成功~' % Template_name)
             else:
                 add_SF_template_statu = False
+                logger.info('添加SF模板%s失败，%s' % (Template_name,save_tip))
         else:
             # 取消添加
             self.express.click_canceltemplate()
@@ -91,11 +97,9 @@ class add_template(Load_drive):
             self.express.click_tip_button()
             save_statu = True
         else:
-            logger.info('添加模板失败，%s' % save_tip)
             self.express.click_tip_button()
             save_statu = False
-        return save_statu
-
+        return save_statu,save_tip
 
     # 添加模板
     def add_template_main(self):
@@ -105,21 +109,21 @@ class add_template(Load_drive):
         self.home_pg.click_Express()
         for data in template_data:
             Logistics_company = data['Logistics_company']  #物流公司
-            Temlpalte_name = data['Template']  #模板
+            Template_name = data['Template']  #模板
             self.express.click_add()
             self.express.click_select()
             self.express.input_logistics_company(Logistics_company)
 
             # 当前模板在模板列表中才进行下一步操作，否则跳过
             # if Temlpalte_name in label_text:
-            if '顺丰' in Temlpalte_name:
+            if '顺丰' in Template_name:
                 self.add_SF_template(data)
-            elif '直连' in Temlpalte_name:
+            elif '直连' in Template_name:
                 self.add_ZL_template(data)
-            elif '菜鸟' in Temlpalte_name:
+            elif '菜鸟' in Template_name:
                 self.add_CN_template(data)
-            elif '套打' in Temlpalte_name:
+            elif '套打' in Template_name:
                 self.add_TD_template(data)
             else:
-                logger.info('当前模板%s,未在模板列表中已跳过该模板...'%Temlpalte_name)
+                logger.info('当前模板%s,未在模板列表中已跳过该模板...'%Template_name)
 
