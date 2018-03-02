@@ -207,7 +207,7 @@ class Basepage():
             try:
                 elements = self.browser.find_elements_by_id(selector_value)
                 logger.info("通过键 %s 值 : %s "
-                            "找到元素 ' %s ' 成功 " % (selector_by, selector_value, elements.text))
+                            "找到元素成功 " % (selector_by, selector_value,))
             except NoSuchElementException as e:
                 logger.error("NoSuchElementException: %s" % e)
                 self.Screen.get_windows_img('寻找元素失败')  # take screenshot
@@ -220,11 +220,11 @@ class Basepage():
         elif selector_by == "p" or selector_by == 'partial_link_text':
             elements = self.browser.find_elements_by_partial_link_text(selector_value)
         elif selector_by == "t" or selector_by == 'tag_name':
-            elemens = self.browser.find_elements_by_tag_name(selector_value)
+            elements = self.browser.find_elements_by_tag_name(selector_value)
         elif selector_by == "x" or selector_by == 'xpath':
             try:
                 elements = self.browser.find_elements_by_xpath(selector_value)
-                logger.info("通过键 %s 值 : %s ""找到元素 ' %s ' 成功 " % (selector_by, selector_value, elements.text))
+                logger.info("通过键 %s 值 : %s ""找到元素成功 " % (selector_by, selector_value))
             except NoSuchElementException as e:
                 logger.error("NoSuchElementException: %s" % e)
                 self.Screen.get_windows_img('寻找元素失败')  # take screenshot

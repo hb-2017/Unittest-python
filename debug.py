@@ -15,19 +15,14 @@ browser.find_element_by_id('submit').click()
 time.sleep(2)
 browser.find_element_by_id('expressSet_os_btn').click()
 time.sleep(2)
-browser.find_element_by_id('addWaybillTemplateBtn').click()
+browser.find_element_by_id('printGlobalSettings').click()
 time.sleep(2)
-browser.find_element_by_id('select2-imgType_selectVal-container').click()
-browser.find_element_by_class_name('select2-search__field').send_keys('申通')
-browser.find_element_by_class_name('select2-search__field').send_keys(Keys.ENTER)
-div = browser.find_element_by_id('printTypeDiv')
-label = div.find_elements_by_tag_name('label')
-label_text1 = []
-for item in label:
-    item1 = item.text
-    if item1=='申通直连180mm':
-        item.click()
-div2 = browser.find_elements_by_id('imgType_02')[1]
-inputs = div2.find_elements_by_tag_name('input')
-for input in inputs:
-    input.send_keys('000')
+lis = browser.find_elements_by_class_name('dd-item')
+for li in lis:
+    try:
+        li.find_element_by_tag_name('i').click()
+    except:
+        pass
+    browser.find_element_by_class_name('confirm').click()
+
+

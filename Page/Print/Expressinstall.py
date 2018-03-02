@@ -22,9 +22,16 @@ class expressinstall(Basepage):
     Payment_mode_04 = 'class_name=>payTypeGroup_4' #第三方付月结
     PayCustId = 'id=>addTempPayCustId' #月结卡号
     Business_type = 'id=>expressTypeSelect'  # 业务类型下拉
+    ZL_code_div = 'id=>imgType_02' # 直连商家信息的div
+    CN_shop_div = 'class_name=>isCaiNiaoShop' # 选择菜鸟店铺的div
+    AddCainiaoShops = 'id=>addTempCainiaoShops' # 菜鸟店铺下拉
+    Cainiaoaddress = 'x=>//*[@id="cainiaoShopAddress"]/div[2]/div[2]/div[2]' #菜鸟店铺的地址
 
-    ZL_code_div = 'id=>imgType_02'
-
+    del_template_div = 'id=>nestable' # 删除模板的div
+    del_template_li = 'class_name=>dd-item' #删除模板的li
+    delete_confirm = 'class_name=>confirm' #删除模板提示的删除按钮
+    delete_cancel = 'class_name=>cancel' # 删除模板提示的取消按钮
+    del_template_name = 'class_name=>dd-handle' # 模板的名称
 
     savetemplate = 'id=>saveWaybillTemplateBtn' #添加按钮
     canceltemplate = 'id=>cancelWaybillTemplateBtn' #取消按钮
@@ -112,27 +119,66 @@ class expressinstall(Basepage):
 
     # 填写直连商家信息
     def input_ZL_code(self,code_list):
-        div = self.find_elements(self.ZL_code_div)[1]
-        inputs = div.find_emelenet_by_tag_name('input')
+        div = self.find_elements(self.ZL_code_div)
+        inputs = div[1].find_elements_by_tag_name('input')
         for item,input in enumerate(inputs):
             try:
-                input.sen_keys(code_list[item])
+                input.send_keys(code_list[item])
             except:
                 input_ZL_code_statu = False
+                break
         else:
             input_ZL_code_statu = True
+        self.sleep(1)
         return input_ZL_code_statu
 
+    # 判断是否有菜鸟店铺
+    def is_CaiNiaoShop(self):
+        dispalynd = self.element_is_dispalynd(self.CN_shop_div)
+        if dispalynd==False:
+            Shop_statu='feitao'
+        else:
+            Shop_statu='cainiao'
+        return Shop_statu
 
+    # 选择菜鸟店铺
+    def click_cainiao_shop(self,cainiao_shop):
+        e = ''
+        select= self.find_element(self.AddCainiaoShops)
+        options = select.find_elements_by_tag_name('option')
+        for option in options:
+            option_text = option.text
+            if option_text==cainiao_shop:
+                try:
+                    option.click()
+                    click_cainiao_shop_statu = True
+                except BaseException as e:
+                    click_cainiao_shop_statu = False
+                break
+        else:
+            click_cainiao_shop_statu=None
+        self.sleep(1)
+        return click_cainiao_shop_statu,e
 
+    # 点击菜鸟地址
+    def click_cainiao_adress(self,Cainiao_address):
+        if len(Cainiao_address)==0:
+            Cainiao_address=0
+        e = ''
+        if isinstance(Cainiao_address,int):
 
-
-
-
-
-
-
-
+            div = self.find_element(self.Cainiaoaddress)
+            label = div.find_elements_by_tag_name('label')[Cainiao_address]
+            try:
+                label.click()
+                click_cainiao_adress_statu = True
+            except BaseException as e:
+                click_cainiao_adress_statu = False
+        else:
+            e = '菜鸟地址数据类型错误，请使用int...'
+            click_cainiao_adress_statu = False
+        self.sleep(1)
+        return click_cainiao_adress_statu,e
 
     # 添加模板
     def click_savetemplate(self):
@@ -153,3 +199,37 @@ class expressinstall(Basepage):
     def click_tip_button(self):
         self.click(self.tip_button)
         self.sleep(1)
+
+    # 全局设置
+    def click_GlobalSettings(self):
+        self.click(self.GlobalSettings)
+        self.sleep(1)
+
+    # 删除模板的lis
+    def get_del_template_li(self):
+        lis = self.find_elements(self.del_template_li)
+        return lis
+
+    # 获取第一个模板的名称
+    def get_01template_name(self):
+        lis = self.get_del_template_li()
+        template_list = lis[0].find_element_by_class_name(self.del_template_name)
+        template_name = template_list.text
+        return template_name
+
+    # 点击删除模板
+    def click_del_template_li(self,li):
+        try:
+            li.find_element_by_tag_name('i').click()
+        except:
+            pass
+
+    # 删除模板的取消按钮
+    def click_cancel(self):
+        self.click(self.delete_cancel)
+        self.sleep(0.5)
+
+    # 删除模板的删除按钮
+    def click_delete(self):
+        self.click(self.delete_confirm)
+        self.sleep(0.5)

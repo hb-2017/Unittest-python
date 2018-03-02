@@ -6,7 +6,7 @@ import unittest
 import HTMLTestRunner
 import re
 from Test_case.Logincase import Test_login
-from Test_case.Logistics_template_case import add_template
+from Test_case.Logistics_template_case import add_template,delete_template
 from System_setting.Report import Report
 from Browser_statr.Driver_statr import Load_drive,Out_drive
 from System_setting.SMTP import Smtp
@@ -16,7 +16,8 @@ from System_setting.SMTP import Smtp
 suite = unittest.TestSuite()
 # suite.addTest(unittest.TestLoader().loadTestsFromTestCase(Test_login))  #登录测试用例
 suite.addTest(Test_login('test_login_success'))  #登录测试用例
-suite.addTest(add_template('add_template_main')) # 添加模板
+# suite.addTest(add_template('add_template_main')) # 添加模板
+suite.addTest(delete_template('delete_template_main')) # 删除模板
 suite.addTest(Out_drive("test_quit_browser"))  #退出浏览器
 
 
