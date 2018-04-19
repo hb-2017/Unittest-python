@@ -239,7 +239,7 @@ class Basepage():
     def input(self, selector, text):
         el = self.find_element(selector)
         el_text = el.text
-        el.clear()
+        # el.clear()
         try:
             el.send_keys(text)
             logger.info("成功在%s框输入文字信息：%s" % (el_text,text))
@@ -355,6 +355,4 @@ class Basepage():
             el.send_keys(Keys.ESCAPE)
         except BaseException as e:
             logger.error('输入%s键失败,%s' % ('ESC',e))
-
-
 
