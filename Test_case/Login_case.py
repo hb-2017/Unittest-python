@@ -13,25 +13,24 @@ from Browser_statr.Driver_statr import Load_drive
 
 logger = Logger(logger="login_page").getlog()
 
-class loing_case(Load_drive):
+class login_case(Load_drive):
 
-    def login(self):
-        data = Config().config_data('common_data',['zhihu'],['username','password'])
+    def setUp(self):
+        self.login_pg = login_page(self.browser)
+
+    def test_login(self):
+        data = Config().config_data('common_data',['muke'],['username','password'])
         username = data[0]
         password = data[1]
-        login_pg = login_page(self.browser)
-        login_pg.click_change_login_button()
-        button_text = login_pg.get_change_login_button_text()
-        if '登录' in button_text:
-            logger.info('切换到登陆界面失败...')
-        else:
-            login_pg.input_user_name(username,password)
-            login_pg.click_login()
-            page_title = login_pg.get_page_title()
-            if '首页' in page_title:
-                logger.info('登陆成功...')
-            else:
-                logger.info('登陆失败...')
+        self.login_pg.clikc_login_button()
+        self.login_pg.input_email_password(username,password)
+        self.login_pg.click_login()
+        self.login_pg.sleep(2)
+        dispaly = self.login_pg.login_is_dispaly()
+        if dispaly==True:
+            raise ('登陆失败，当前处于登陆界面')
 
 
+    def test_QQ_login(self):
+        self.login_pg.clikc_login_button()
 
