@@ -13,90 +13,174 @@ from System_setting.Logger import Logger
 
 logger = Logger(logger='Mysql').getlog()
 
-class Mysql(object):
+
+class Mysql():
 
     def __init__(self):
-        data = self.get_mysql_info()
-        data = data[0]
-        print(data)
-        Mysql_ip = data[0]   # 数据库ip
-        Mysql_name = data[1] #用户名
-        Mysql_password = data[2]  #密码
-        db_name = data[3]  #数据库名
-        db_port = data[4]  #端口号
-        db_encode = data[5]  #编码
+        cnf = Config()
+        self.db_data = cnf.config_data('DB',['Alitest'],['ip','user','password','port','db'])
+        print(self.db_data)
+
+
+    def Connect_db(self):
+        # 打开数据库连接
         try:
-            # 打开数据库连接
-            self.db = pymysql.connect(Mysql_ip,Mysql_name,Mysql_password,db_name)
+            self.db = pymysql.connect(host=self.db_data[0],user=self.db_data[1],passwd=self.db_data[2],db=self.db_data[4])
             # 使用cursor()方法获取操作游标
             self.cursor = self.db.cursor()
-            logger.info('连接数据库:%s成功...' %db_name )
+            logger.info('数据库【%s】连接成功'%self.db_data[4])
+            return True
         except Exception as e:
-            logger.error('数据库链接异常,%s' % e)
+            logger.info('数据库【%s】连接失败：%s' % (self.db_data[3],e))
+            return False
 
 
-    def get_mysql_info(self):
-        config_value = ['Mysql_ip','Mysql_name','Mysql_password','db_name','db_port','db_encode']
-        config = Config()
-        data = config.config_data('db_info',['my_sql'],config_value)
-        return data
-
-
-    def add(self,sql):
+    def implement_sql(self,sql):
+        logger.info('即将执行sql【%s】'%sql)
         try:
-            # 执行sql并返回执行状态
             sql_satatu = self.cursor.execute(sql)
+            # sql_statu2 = self.cursor.fetchall()
             self.db.commit()
-            logger.info('正在执行add sql：%s'%sql)
-            sql_data = self.cursor.fetchall()
-            return sql_satatu,sql_data
-        except BaseException as e :
-            logger.error('执行sql:%s 发生异常%s,开始回滚'%(sql,e))
-            # 方法二：采用traceback模块查看异常
-            # traceback.print_exc()
-            # 方法三：采用sys模块回溯最后的异常
-            # 输出异常信息
-            # info = sys.exc_info()
-            # print(info[0], ":", info[1])
-
-            # 异常则回滚
-            self.db.rollback()
-
-    def delete(self, sql):
-        try:
-            # 执行sql并返回执行状态
-            sql_satatu = self.cursor.execute(sql)
-            self.db.commit()
-            logger.info('正在执行delete sql：%s' % sql)
             return sql_satatu
-        except BaseException as e:
-            logger.error('执行sql:%s 发生异常%s,开始回滚' % (sql, e))
-            # 异常则回滚
+        except Exception as e:
+            logger.error('执行sql【%s】，发生异常：%s,开始回滚' % (sql, e))
             self.db.rollback()
+            return False
 
 
-    def updata(self, sql):
-        try:
-            # 执行sql并返回执行状态
-            sql_satatu = self.cursor.execute(sql)
-            self.db.commit()
-            logger.info('正在执行updata sql：%s' % sql)
+    # 增
+    def add(self,table_name,value_str,field_str=None):
+        '''
+        :param table_name: 数据库表名
+        :param field_str: 增加的字段
+        :param value_str: 增加字段对应值
+        :return:
+        '''
+        db_state = self.Connect_db()
+        if db_state==True:
+            if field_str!=None:
+                sql = 'INSERT INTO %s (%s) VALUES (%s)'%(table_name,field_str,value_str)
+            else:
+                sql = 'INSERT INTO %s  VALUES (%s)' % (table_name, value_str)
+            # 返回sql执行状态
+            sql_satatu = self.implement_sql(sql)
             return sql_satatu
-        except BaseException as e:
-            logger.error('执行sql:%s 发生异常%s,开始回滚' % (sql, e))
-            # 异常则回滚
-            self.db.rollback()
+        else:
+            logger.info('数据库未连接，无法执行sql')
 
 
-    def selete(self, sql):
-        try:
-            # 执行sql并返回执行状态
-            sql_satatu = self.cursor.execute(sql)
-            self.db.commit()
-            logger.info('正在执行selete sql：%s' % sql)
+    # 删
+    def delete(self,table_name,condition):
+        '''
+        :param table_name: 数据库表名
+        :param condition: 删除条件
+        :return:
+        '''
+        if condition==None or len(condition)<1:
+            logger.info('删除数据条件为必填，需要删除全表请用delete_all')
+        else:
+            db_state = self.Connect_db()
+            if db_state == True:
+                sql = 'delete from %s where %s'%(table_name,condition)
+                # 返回sql执行状态
+                sql_satatu = self.implement_sql(sql)
+                return sql_satatu
+            else:
+                logger.info('数据库未连接，无法执行sql')
+
+
+    # 删除全部
+    def delete_all(self,table_name):
+        '''
+        :param table_name: 数据库表名
+        :return:
+        '''
+        db_state = self.Connect_db()
+        if db_state == True:
+            sql = 'delete from %s '%(table_name)
+            # 返回sql执行状态
+            sql_satatu = self.implement_sql(sql)
             return sql_satatu
-        except BaseException as e:
-            logger.error('执行sql:%s 发生异常%s,开始回滚' % (sql, e))
-            # 异常则回滚
-            self.db.rollback()
+        else:
+            logger.info('数据库未连接，无法执行sql')
+
+
+    # 改
+    def updata(self,table_name,set_str,condition):
+        '''
+        :param table_name: 数据库表名
+        :param set_str: 修改的字段名和值
+        :param condition: 修改条件
+        :return:
+        '''
+        if set_str!=None and len(condition)>1: #判断set数据是否成立
+            if condition == None or len(condition) < 1:  #判断是否有where条件
+                logger.info('修改数据条件为必填，需要删除全表请用updata_all')
+            else:
+                db_state = self.Connect_db()
+                if db_state == True:
+                    sql = 'updata from %s set %s where %s' % (table_name, set_str, condition)
+                    # 返回sql执行状态
+                    sql_satatu = self.implement_sql(sql)
+                    return sql_satatu
+                else:
+                    logger.info('数据库未连接，无法执行sql')
+        else:
+            logger.info('修改数据条件为必填，且长度大于1')
+
+
+    # 改
+    def updata_all(self, table_name, set_str):
+        '''
+        :param table_name: 数据库表名
+        :param set_str: 修改的字段名和值
+        :return:
+        '''
+        if set_str != None and len(set_str) > 1:  # 判断set数据是否成立
+            db_state = self.Connect_db()
+            if db_state == True:
+                sql = 'updata from %s set %s ' % (table_name, set_str)
+                # 返回sql执行状态
+                sql_satatu = self.implement_sql(sql)
+                return sql_satatu
+            else:
+                logger.info('数据库未连接，无法执行sql')
+        else:
+            logger.info('修改数据条件为必填，且长度大于1')
+
+
+    # 查
+    def selete(self,table_name,check_field='*',condition=None):
+        '''
+        :param table_name: 数据库表名
+        :param check_field: 查找的字段
+        :param condition: 查找条件
+        :return: 查找的结果
+        '''
+        if table_name!=None and len(table_name)>1:
+            db_state = self.Connect_db()
+            if db_state == True:
+                if condition==None:
+                    sql = 'select %s from %s'%(check_field,table_name)
+                else:
+                    sql = 'select %s from %s where %s' % (check_field, table_name,condition)
+                sql_satatu = self.implement_sql(sql)
+                select_satatu = self.cursor.fetchall()
+                return select_satatu
+            else:
+                logger.info('数据库未连接，无法执行sql')
+
+
+    # 开放性接口，sql自己定义
+    def open_sql(self,sql):
+        '''
+        :param sql:自定义的sql
+        :return:sql执行状态或查询结果
+        '''
+        db_state = self.Connect_db()
+        if db_state == True:
+            sql_satatu = self.implement_sql(sql)
+        else:
+            logger.info('数据库未连接，无法执行sql')
+
 
